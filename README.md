@@ -24,6 +24,8 @@ You can view their github page [here](https://github.com/discordjs/Commando).
 * More will be added in the future!
 
 
+> Don't know the prefix for the bot? Run `@Corion Bot#0284 prefix` for the prefix!
+
 # Outro
 
 Thanks so much for reading this README!
