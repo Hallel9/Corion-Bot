@@ -3,7 +3,7 @@ const Commando = require('discord.js-commando');
 const path = require('path');
 const config = require('./config.json')
 const client = new Commando.Client({
-    owner: config.ownerId,
+    owner: ['241632903258177536','704879934505615420'],
     commandPrefix: config.prefix,
     disableEveryone: true
 });
