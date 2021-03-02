@@ -35,3 +35,6 @@ If you need help with my bot, join our [discord server](https://discord.gg/wcbQ7
 Wanna test everything out before you decide to fork this github repo? [Invite my bot!](https://discord.com/api/oauth2/authorize?client_id=801842822172246066&permissions=8&scope=bot)
  
 **Thanks for inviting Corion to your server!**
+
+
+You can check out the website [here](https://happy-ride-37821d.netlify.app/index.html)
