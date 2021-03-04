@@ -8,21 +8,24 @@ module.exports = class AvatarCommand extends commando.Command {
             group: 'misc',
             memberName: 'avatar',
             guildOnly: true,
+            format: '${prefix}avatar @user',
             clientPermissions: ['SEND_MESSAGES'],
             userPermissions: ['SEND_MESSAGES'],
             aliases: ['av', 'pfp'],
         })
     }
-    async run (message) {
-        const member = message.mentions.users.first()
+    async run (message, args) {
+        const member = message.mentions.users.first() || message.guild.members.cache.get(args[0])
         const author = message.author
         if(!member){
-            message.reply('Please mention a user!')
+            return message.reply('Please mention a user!')
         }
         const embed = new Discord.MessageEmbed()
-            .setTitle(`${author}`)
+            .setTitle(author.username)
+        	.setDescription(`Here's ${member.username}'s avatar!`)
             .setImage(member.displayAvatarURL({dynamic: true, size: 1024}))
-            .setColor('RANDOM')
+            .setColor('#3443eb')
+        	.setTimestamp()
         message.channel.send(embed)
     }
 }

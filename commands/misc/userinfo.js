@@ -21,10 +21,10 @@ module.exports = class userinfoCommand extends Commando.Command {
                 .setColor('RANDOM')
                 .setTimestamp()
                 .setFooter(`Created by ${message.guild.owner.user.username}`)
-                .addField('Created At', `${member.user.createdAt}`)
-                .addField('Is Bot?', `${member.user.bot}`)
-                .addField('User id',`${member.user.id}`)
-                .addField('User Discriminator', `${member.user.discriminator}`)
+                .addField('Created At', `${member.user.createdAt}`, true)
+                .addField('Is Bot?', `${member.user.bot}`, true)
+                .addField('User id',`${member.user.id}`, true)
+                .addField('User Discriminator', `${member.user.discriminator}`, true);
             message.channel.send(embed)
             }
         }
